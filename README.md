@@ -10,9 +10,12 @@ A domain-specialized LLM assistant for hummingbird biology, behavior, ecology, p
 
 ## 2. Business Problem
 
-General-purpose LLMs give shallow, generic, or occasionally incorrect answers on narrow biological domains — confusing hummingbird torpor with illness, giving vague foraging advice that ignores flower-bill coevolution, or citing outdated or wrong conservation figures. This project builds a small, cheap-to-run, domain-specialized assistant for:
+General-purpose LLMs give shallow, generic, or occasionally incorrect answers on narrow biological domains — confusing hummingbird torpor with illness, giving vague foraging advice that ignores flower-bill coevolution, or citing outdated or wrong conservation figures. This project builds a small, cheap-to-run, domain-specialized assistant for **Hummingbird enthusiasts** who want more depth than a field guide provides.
 
-- **Hummingbird enthusiasts / birders** who want more depth than a field guide provides
+## Highlevel Flow
+
+![Highlevel](images/highlevel_flow.png)
+
 
 ## 3. Dataset Details
 
@@ -22,7 +25,7 @@ General-purpose LLMs give shallow, generic, or occasionally incorrect answers on
 | `data/instruction_dataset.jsonl` | Supervised fine-tuning (SFT) | 100 instruction/response pairs | JSONL |
 | `data/preference_dataset.jsonl` | DPO alignment | 65 preference pairs | JSONL: `{prompt, chosen, rejected}` |
 
-The pretraining corpus is original-authored text, synthesized (not copied) from a real, CC BY 4.0-licensed research paper on hummingbird population health, disease ecology, and genomics. The instruction and preference datasets are original-authored, covering the full domain topic list above.
+The pretraining corpus is original-authored text, synthesized (not copied) from a real, CC BY 4.0-licensed research paper on hummingbird population health, disease ecology, and genomics. It is the paraphrased version of the original literature. Additionally, dataset for instruction fine tuning and preference alignment were obtained using Cluade Sonnet 4.6 model.
 
 ## 4. Base Model Used
 
@@ -138,6 +141,8 @@ hummingbird-assistant-llm/
 │   └── fine_tuning_explanation.md
 ├── src/
 │   └── inference.py
+├── images/
+│   └── highlevel_flow.png
 ├── README.md
 └── requirements.txt
 ```
