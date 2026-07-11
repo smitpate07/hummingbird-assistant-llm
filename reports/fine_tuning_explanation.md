@@ -37,4 +37,4 @@ This is the third and final stage. Instead of showing the model single correct a
 | DPO beta | 0.05 | Controls how far the model is allowed to drift from its Stage 2 starting point while learning preferences. Lower values allow a stronger preference signal; this was chosen to make the preference training clearly noticeable rather than overly conservative. |
 | Epochs — Stage 1 | 3 | A small number of passes is usually enough for continued pretraining to shift vocabulary and tone without overfitting to a relatively small text corpus. |
 | Epochs — Stage 2 | 20 | Instruction datasets are often small (as this one is), so more passes are needed for the model to reliably learn the instruction-following pattern. |
-| Epochs — Stage 3 | 3 | DPO trains on preference *pairs* rather than plain examples, and tends to be more sensitive to overtraining than SFT on the same amount of data, so a lower epoch count is used here by design. |
+| Epochs — Stage 3 | 5 | DPO trains on preference *pairs* rather than plain examples, and tends to be more sensitive to overtraining than SFT on the same amount of data, so a lower epoch count is used here by design. |

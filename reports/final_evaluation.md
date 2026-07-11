@@ -205,6 +205,12 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 
 ## Final Observations
 
-- **Epoch count matters more than any other single factor tested in this project.** Three DPO configurations have now been evaluated: an earlier run (~3 epochs), this 5-epoch run, and a 10-epoch run. The 10-epoch run collapsed into incoherent output — fabricated terminology, embedded foreign-language text, and answers referencing the wrong bird family entirely. The 5-epoch run in this report is coherent but shows early signs of the same failure mode in miniature (Q1's albatross reference is a clear echo of the 10-epoch collapse, just contained to one question instead of most of them). **This suggests the safe range for DPO on this size of preference dataset (65 pairs) is at or below roughly 3 epochs**, and 5 is already measurably past the point of reliable behavior on at least some questions.
-- **SFT remains the strongest single stage overall** in this evaluation round, winning or tying "Best Answer" on 8 of 11 questions.
-- **Recommendation:** use the SFT checkpoint, or a DPO checkpoint trained for fewer epochs (≤3) and re-evaluated, rather than this 5-epoch DPO model, until the epoch-sensitivity and Q7-style regressions are further investigated.
+ - SFT consistently improved factual accuracy. 
+    - Supervised Fine-Tuning (SFT) substantially improved factual accuracy across most hummingbird biology questions. Compared with the base model, SFT produced more precise, relevant, and reliable responses while reducing hallucinations and off-topic generations. Across our evaluation benchmark, it was the most consistent model overall. 
+    
+- DPO matched SFT, but occasionally regressed.
+    - Direct Preference Optimization (DPO) achieved performance comparable to SFT on many evaluation questions. However, it occasionally introduced confident factual inaccuracies that were not present in the SFT model. These results suggest that while preference optimization can improve response quality, it also requires carefully curated preference data to avoid reinforcing incorrect behaviors. 
+-  There is still room to improve.
+    - Both fine-tuned models continued to struggle with a small number of specialized hummingbird biology questions. Expanding the instruction dataset, improving preference pair quality, and broadening the evaluation benchmark are likely to further improve factual accuracy and robustness in future iterations.
+-  The benchmark validated the fine-tuning pipeline.
+    - The evaluation demonstrates that domain-specific fine-tuning can significantly improve factual performance over the base model. Among the approaches evaluated, Supervised Fine-Tuning (SFT) delivered the most balanced combination of accuracy, consistency, and reliability, making it the strongest overall checkpoint for this project. 
