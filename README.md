@@ -165,3 +165,7 @@ All three stages save to a Lightning.ai Teamspace path (persistent local storage
 3. Run `notebooks/instruction_finetuning.ipynb` (Stage 2), which loads Stage 1's merged model automatically.
 4. Run `notebooks/dpo_alignment.ipynb` (Stage 3), which loads Stage 2's merged model automatically.
 5. Run inference via `src/inference.py`, pointing at the final Stage 3 merged model (Teamspace path or `{HF_REPO_FULL}/stage3-merged` on the Hub).
+
+## 17. Inferencing/Summary
+
+Use the Chatbot located here (built using Botpress):  https://hummingbird-assistant.lovable.app/
