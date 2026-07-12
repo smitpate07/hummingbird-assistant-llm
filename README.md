@@ -6,7 +6,7 @@ A domain-specialized LLM assistant for hummingbird biology, behavior, ecology, p
 
 ## 1. Domain Selected
 
-**Hummingbird biology and conservation.** This spans flight mechanics, metabolism, torpor, foraging and pollination ecology, migration, breeding biology, hovering physiology, species diversity, and conservation threats — with the pretraining corpus specifically grounded in population health, disease ecology, and genomics research (Ernest et al., *Annual Review of Animal Biosciences*, 2024, CC BY 4.0).
+**Hummingbird biology and conservation.** This spans flight mechanics, metabolism, torpor, migration, breeding biology, hovering physiology, species diversity, and conservation threats — with the pretraining corpus specifically grounded in population health, disease ecology, and genomics research (Ernest et al., *Annual Review of Animal Biosciences*, 2024, CC BY 4.0).
 
 ## 2. Business Problem
 
@@ -75,7 +75,7 @@ See `reports/fine_tuning_explanation.md` for the reasoning behind each value.
 
 ## 9. Training Screenshots or Logs
 
-
+See reports folder.
 
 ## 10. Before vs. After Output Comparison
 
@@ -102,23 +102,19 @@ This second example is intentionally included as a **known, unresolved limitatio
 ## 11. Final Observations
 
 - **SFT delivered the largest, most reliable quality jump** — coherence, directness, and domain accuracy all improved sharply and consistently.
-- **DPO's improvement over SFT was inconsistent, and highly epoch-sensitive.** A 10-epoch DPO run produced incoherent, collapsed output (fabricated terminology, embedded foreign-language text, answers referencing the wrong bird family entirely). A 5-epoch run was coherent but still showed a smaller version of the same failure pattern on some questions. The safe range for DPO on this size of preference dataset (65 pairs) appears to be **at or below ~3 epochs**.
-- **A specific, reproducible regression appears at Q7 (clutch size / parental care) in both SFT and DPO**, independent of epoch count: both invent parental incubation roles that directly contradict the instruction dataset. This points to a dataset-balance or repetition issue rather than a training-duration issue, and is flagged as open follow-up work rather than papered over.
+- **DPO's improvement over SFT was inconsistent, and highly epoch-sensitive.**  A 5-epoch run was coherent but still showed a smaller version of the some failure pattern on some questions. The safe range for DPO on this size of preference dataset (65 pairs) appears to be **at or below ~5 epochs, (needs further testing)**.
 - Full per-question, per-criterion analysis is in `reports/final_evaluation.md`.
 
 ## 12. Challenges Faced
 
 - **Environment migration mid-project:** training moved from Google Colab to Lightning.ai partway through, requiring removal of all `google.colab`-specific code (Drive mounting, file upload widgets) and replacing it with Lightning.ai's Teamspace persistent-storage pattern.
-- **HF Hub README validation errors:** Unsloth's `save_pretrained_merged`/`save_pretrained` auto-generates a `README.md` with a `base_model` metadata field — when a model is loaded from a local filesystem path (as later stages do, loading the previous stage's local checkpoint), that local path leaks into the metadata and gets rejected by the Hugging Face Hub's YAML validator on upload. Fixed with a `_fix_readme_base_model()` helper that rewrites the field to a valid Hub ID before uploading.
-- **DPO epoch sensitivity:** unlike SFT, DPO on a small preference dataset degrades sharply past a certain epoch count, discovered empirically by comparing 3, 5, and 10-epoch runs rather than assumed upfront.
+- **DPO epoch sensitivity:** unlike SFT, DPO on a small preference dataset degrades sharply past a certain epoch count.
 - **Persistent, training-data-contradicting hallucinations:** some specific facts (clutch size, parental incubation roles) failed to transfer correctly even after both SFT and DPO, despite being explicitly stated in the training data.
 
 ## 13. Future Improvements
 
-- Investigate the Q7-style regression directly — try increasing repetition of the specific fact in the training data, or adding more preference pairs that directly contrast it against the model's likely prior (many bird species do share incubation duties).
 - Re-run DPO at 1–3 epochs with checkpoint-by-checkpoint evaluation to find the actual quality peak, rather than relying on a small number of discrete epoch-count tests.
-- Expand `non_instruction_data.txt` to cover the full topic breadth (flight mechanics, migration, foraging, etc.), not just disease/genomics.
-- Add automated factual-consistency scoring (e.g., a larger LLM as judge) to replace/supplement manual side-by-side comparison.
+- Expand dataset size to cover the full topic breadth.
 - Add retrieval-augmented generation (RAG) over a curated hummingbird literature corpus as a complementary approach to pure fine-tuning, particularly for citation-level accuracy.
 
 ## 14. Repository Structure
@@ -150,7 +146,7 @@ hummingbird-assistant-llm/
 
 ## 15. Storage Layout
 
-All three stages save to a Lightning.ai Teamspace path (persistent local storage) and a **single shared Hugging Face Hub repo**, organized by subfolder rather than one repo per stage:
+All three stages save to a Lightning.ai Teamspace path (persistent local storage) and a **single shared Hugging Face Hub repo**, organized by subfolder rather than one repo per stage. The Hugging Face repo can be found: [here](https://huggingface.co/Snow79703/Hummingbird-assistant-llm/tree/main)
 
 ```
 {HF_REPO_FULL}/
