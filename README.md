@@ -136,8 +136,8 @@ hummingbird-assistant-llm/
 │   ├── final_evaluation.md
 │   └── fine_tuning_explanation.md
 ├── src/
-│   └── modal_app.py
-|   └── test_endpoint.py    
+│   └── modal_app.py # Deployment script
+|   └── test_endpoint.py    #Testing endpoint
 ├── images/
 │   └── highlevel_flow.png
 ├── README.md
