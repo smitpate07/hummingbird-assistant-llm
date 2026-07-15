@@ -19,7 +19,7 @@ This is the second stage, where the model learns to actually behave like an assi
 ### DPO (Direct Preference Optimization)
 This is the third and final stage. Instead of showing the model single correct answers, it's shown pairs — a *better* answer and a *worse* answer to the same question — and trained to prefer the better one. This is a lighter-weight alternative to RLHF (Reinforcement Learning from Human Feedback): it gets a similar "align the model with what we actually want" effect without needing a separate reward model or reinforcement learning loop.
 
-*ORPO is a related, newer technique that combines the SFT and preference-alignment steps into a single training pass. This project uses the more traditional separate SFT-then-DPO pipeline instead, since it makes it easier to evaluate each stage's contribution independently.*
+*ORPO is a related, newer technique that combines the SFT and preference-alignment steps into a single training pass. This project uses the more traditional separate SFT-then-DPO pipeline instead, since it makes it easier to evaluate each stage's contribution independently*
 
 ## Hyperparameters Used, and Why
 
