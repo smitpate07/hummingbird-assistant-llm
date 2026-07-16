@@ -80,7 +80,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | Moderate imprecision | Minimal | Minimal |
 | Professional response quality | Poor | Very good | Good |
 
-**Best Answer: SFT.** This run's SFT answer explicitly and correctly distinguishes torpor from hibernation (birds "remain responsive... can awaken quickly"), a level of precision DPO doesn't add anything beyond.
+**Best Answer: SFT.** This run's SFT answer explicitly and correctly distinguishes torpor from hibernation (birds "remain responsive..can awaken quickly"), a level of precision DPO doesn't add anything beyond.
 
 ---
 
