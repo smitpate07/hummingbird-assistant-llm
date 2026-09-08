@@ -29,7 +29,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | Severe (degenerate loop) | Moderate (off-topic) | Severe (wrong domain entirely) |
 | Professional response quality | Poor | Fair | Poor — a hummingbird assistant citing albatross data is a clear miss |
 
-**Best Answer: SFT.** DPO's fluent delivery makes its error worse here, not better — confidently citing the wrong species is more likely to mislead a user than an obviously broken repetition loop or a merely off-topic answer.
+**Best Answer: SFT** DPO's fluent delivery makes its error worse here, not better — confidently citing the wrong species is more likely to mislead a user than an obviously broken repetition loop or a merely off-topic answer.
 
 ---
 
@@ -46,7 +46,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | Fail — cites a fabricated study to support the wrong claim | Good | Moderate — adds "circumventricular coronary circulation," an anatomical term that doesn't normally apply to hearts (it usually refers to brain structures), likely fabricated |
 | Professional response quality | Poor | Good | Good, undermined slightly by the fabricated-sounding detail |
 
-**Best Answer: SFT.** DPO gets the core numbers right but pads the answer with plausible-sounding but likely-incorrect anatomical jargon, which SFT avoids.
+**Best Answer: SFT** DPO gets the core numbers right but pads the answer with plausible-sounding but likely-incorrect anatomical jargon, which SFT avoids.
 
 ---
 
@@ -80,7 +80,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | Moderate imprecision | Minimal | Minimal |
 | Professional response quality | Poor | Very good | Good |
 
-**Best Answer: SFT.** This run's SFT answer explicitly and correctly distinguishes torpor from hibernation (birds "remain responsive.....can awaken quickly"), a level of precision DPO doesn't add anything beyond.
+**Best Answer: SFT** This run's SFT answer explicitly and correctly distinguishes torpor from hibernation (birds "remain responsive.....can awaken quickly"), a level of precision DPO doesn't add anything beyond.
 
 ---
 
