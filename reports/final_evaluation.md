@@ -97,7 +97,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | Moderate (vague but plausible) | Poor (unsupported nonstop claim) | **Worst** — a specific, implausible distance stated as fact |
 | Professional response quality | Fair | Good prose, poor accuracy | Good prose, poor accuracy |
 
-**Best Answer: Base.** As in the earlier evaluation round, this is a case where fine-tuning increased confidence without increasing accuracy — and DPO's number here is the most objectively wrong answer across the entire evaluation set.
+**Best Answer: Base** As in the earlier evaluation round, this is a case where fine-tuning increased confidence without increasing accuracy — and DPO's number here is the most objectively wrong answer across the entire evaluation set.
 
 ---
 
