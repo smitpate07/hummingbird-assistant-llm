@@ -94,7 +94,7 @@ Real outputs from the evaluation reports (`reports/base_model_evaluation.md`, `r
 | Stage | Answer |
 |---|---|
 | Base | *"2 to 3."* — close but incorrect (true answer is almost universally exactly 2) |
-| SFT | *"...a clutch of two to four... both parents participate in incubation..."* — clutch size still overstated, and **incorrectly claims both parents incubate** (contradicts training data — males don't participate in nest care) |
+| SFT | *"...a clutch of two to four.... both parents participate in incubation...."* — clutch size still overstated, and **incorrectly claims both parents incubate** (contradicts training data — males don't participate in nest care) |
 | DPO | Same overstated clutch size, elaborates the same incorrect parental-care claim further |
 
 This second example is intentionally included as a **known, unresolved limitation** — see Final Observations.
