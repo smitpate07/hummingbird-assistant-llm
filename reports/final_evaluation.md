@@ -148,7 +148,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | Adds an incorrect location | None | None |
 | Professional response quality | Poor | Very good | Very good |
 
-**Best Answer: Tie — SFT and DPO.** Both are accurate and essentially identical in content and quality; Base is clearly worst due to the added incorrect detail and the generation-quality collapse into repeated text.
+**Best Answer: Tie — SFT and DPO** Both are accurate and essentially identical in content and quality; Base is clearly worst due to the added incorrect detail and the generation-quality collapse into repeated text.
 
 ---
 
