@@ -213,4 +213,4 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 -  There is still room to improve.
     - Both fine-tuned models continued to struggle with a small number of specialized hummingbird biology questions. Expanding the instruction dataset, improving preference pair quality, and broadening the evaluation benchmark are likely to further improve factual accuracy and robustness in future iterations.
 -  The benchmark validated the fine-tuning pipeline.
-    - The evaluation demonstrates that domain-specific fine-tuning can significantly improve factual performance over the base model. Among the approaches evaluated, Supervised Fine-Tuning (SFT) delivered the most balanced combination of accuracy, consistency, and reliability, making it the strongest overall checkpoint for this project. 
+    - The evaluation demonstrates that domain-specific fine-tuning can significantly improve factual performance over the base model. Among the approaches evaluated, Supervised Fine-Tuning (SFT) delivered the most balanced combination of accuracy, consistency, and reliability, making it the strongest overall checkpoint for this project.
