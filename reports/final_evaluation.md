@@ -206,7 +206,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 ## Final Observations
 
  - SFT consistently improved factual accuracy. 
-    - Supervised Fine-Tuning (SFT) substantially improved factual accuracy across most hummingbird biology questions. Compared with the base model, SFT produced more precise, relevant, and reliable responses while reducing hallucinations and off-topic generations. Across our evaluation benchmark, it was the most consistent model overall. 
+    - Supervised Fine-Tuning (SFT) substantially improved factual accuracy across most hummingbird biology questions. Compared with the base model, SFT produced more precise, relevant, and reliable responses while reducing hallucinations and off-topic generations. Across our evaluation benchmark, it was the most consistent model overall.
     
 - DPO matched SFT, but occasionally regressed.
     - Direct Preference Optimization (DPO) achieved performance comparable to SFT on many evaluation questions. However, it occasionally introduced confident factual inaccuracies that were not present in the SFT model. These results suggest that while preference optimization can improve response quality, it also requires carefully curated preference data to avoid reinforcing incorrect behaviors. 
