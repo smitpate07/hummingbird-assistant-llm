@@ -114,7 +114,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | Wrong number | Minimal | Uses a real species name attached to an incorrect, physically backwards claim — arguably more misleading than an invented species name, since it's fact-checkable and wrong |
 | Professional response quality | Poor | Good | Good, undermined by the incorrect specific claim |
 
-**Best Answer: SFT** DPO's use of a *real* species name in service of an *incorrect* claim is a notable pattern worth flagging — it's more convincing and thus more risky than a vaguer or fabricated-sounding claim would be.
+**Best Answer: SFT** DPO's use of a *real* species name in service of an *incorrect* claim is a notable pattern worth flagging — it's more convincing and thus more risky than a vague or fabricated-sounding claim would be.
 
 ---
 
