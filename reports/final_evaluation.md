@@ -182,7 +182,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | None, just incomplete | None | None |
 | Professional response quality | Fair | Very good | Good |
 
-**Best Answer: SFT**, by a narrow margin — both SFT and DPO give reasonable, non-contradictory explanations; SFT's is slightly more mechanistically precise (explicitly ties wingbeat frequency to continuous lift generation).
+**Best Answer: SFT** by a narrow margin — both SFT and DPO give reasonable, non-contradictory explanations; SFT's is slightly more mechanistically precise (explicitly ties wingbeat frequency to continuous lift generation).
 
 ---
 
