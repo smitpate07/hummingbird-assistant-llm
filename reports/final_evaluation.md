@@ -131,7 +131,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | Moderate (wrong count) | Poor — invents a parental-care claim directly contrary to the training data | Poor — same invented claim, elaborated further |
 | Professional response quality | Fair | Fair, undermined by the incorrect claim | Fair, undermined further by the more detailed incorrect claim |
 
-**Best Answer: Base**, on a technicality — its clutch-size number is closer to correct, and it doesn't invent a parental-care claim. This is the clearest case in this evaluation round of fine-tuning introducing a **specific, reproducible factual error not present in the base model**, worth investigating as a training data or dataset-balance issue (see Final Observations).
+**Best Answer: Base** on a technicality — its clutch-size number is closer to correct, and it doesn't invent a parental-care claim. This is the clearest case in this evaluation round of fine-tuning introducing a **specific, reproducible factual error not present in the base model**, worth investigating as a training data or dataset-balance issue (see Final Observations).
 
 ---
 
