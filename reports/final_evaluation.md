@@ -165,7 +165,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | None | None | None |
 | Professional response quality | Fair | Very good | Good |
 
-**Best Answer: SFT**, for the cleanest phrasing — DPO's content is equally accurate but has a slightly awkward closing clause.
+**Best Answer: SFT** for the cleanest phrasing — DPO's content is equally accurate but has a slightly awkward closing clause.
 
 ---
 
