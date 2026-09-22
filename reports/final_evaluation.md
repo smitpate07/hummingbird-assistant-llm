@@ -63,7 +63,7 @@ Each question is evaluated against 8 criteria — **Correctness, Helpfulness, Do
 | Hallucination reduction | Fabricated historical framing | Minimal | One unverified specific statistic |
 | Professional response quality | Poor | Good | Good |
 
-**Best Answer: SFT**, for avoiding DPO's unverified "50 times body weight" claim, though both are reasonably strong.
+**Best Answer: SFT** for avoiding DPO's unverified "50 times body weight" claim, though both are reasonably strong.
 
 ---
 
